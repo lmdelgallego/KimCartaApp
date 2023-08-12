@@ -8,18 +8,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FilterComponent } from './filter/filter.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
+import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    FilterComponent
+    FilterComponent,
+    CardComponent
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
-    FilterComponent
+    FilterComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     MatToolbarModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
   ]
 })
 export class UiModule { }

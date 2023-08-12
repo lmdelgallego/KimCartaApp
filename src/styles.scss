@@ -18,9 +18,9 @@ $kimcarta: (
     A400 : #1e9eff,
     A700 : #0493ff,
     contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
+        50 : #3C3C3C,
+        100 : #3C3C3C,
+        200 : #3C3C3C,
         300 : #ffffff,
         400 : #ffffff,
         500 : #ffffff,
@@ -28,9 +28,9 @@ $kimcarta: (
         700 : #ffffff,
         800 : #ffffff,
         900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
+        A100 : #3C3C3C,
+        A200 : #3C3C3C,
+        A400 : #3C3C3C,
         A700 : #ffffff,
     )
 );
@@ -44,7 +44,7 @@ $KimCartaApp-theme: mat.define-light-theme((
     primary: $KimCartaApp-primary,
     accent: $KimCartaApp-accent,
     warn: $KimCartaApp-warn,
-  )
+  ),
 ));
 
 @include mat.all-component-themes($KimCartaApp-theme);
@@ -59,6 +59,7 @@ $KimCartaApp-theme: mat.define-light-theme((
   --secondary-dark: #c60055;
 
   --border-color: rgba(0, 0, 0, 0.12);
+  // --mat-sidenav-content-text-color: #3C3C3C;
 }
 
 

@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 import { LayoutModule } from '../components/layout/layout.module';
 
@@ -25,6 +26,7 @@ import { LayoutModule } from '../components/layout/layout.module';
     MatExpansionModule,
     MatTableModule,
     MatChipsModule,
+    MatCardModule,
     LayoutModule,
     UiModule,
   ],
