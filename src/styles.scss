@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @include mat.core();
+@import 'styles/_normalize.scss';
 
 $kimcarta: (
     50 : #e0ecf0,
@@ -48,10 +49,22 @@ $KimCartaApp-theme: mat.define-light-theme((
 
 @include mat.all-component-themes($KimCartaApp-theme);
 
+// create root variables
+:root{
+  --primary: #006281;
+  --primary-light: #4d91a7;
+  --primary-dark: #00506e;
+  --secondary: #ff4081;
+  --secondary-light: #ff79b0;
+  --secondary-dark: #c60055;
+
+  --border-color: rgba(0, 0, 0, 0.12);
+}
+
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #3C3C3C;}
 
-// reser a
-a { text-decoration: none; color: inherit; }
+@import 'styles/_utils.scss';
+@import 'styles/_typography.scss';

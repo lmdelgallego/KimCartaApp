@@ -19,7 +19,12 @@
 
 
 .sidenav-sidebar{
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
-  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  padding: 2.25rem 0 0 0;
+}
 
+.page-content{
+  background-color: white;
+  padding: 2.75rem 1.5rem;
 }
