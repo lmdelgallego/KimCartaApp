@@ -51,4 +51,7 @@ $KimCartaApp-theme: mat.define-light-theme((
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #3C3C3C;}
+
+// reser a
+a { text-decoration: none; color: inherit; }

@@ -1,0 +1,5 @@
+@use '@angular/material' as mat;
+@import '../styles.scss';
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat.get-color-from-palette($KimCartaApp-primary, 500);

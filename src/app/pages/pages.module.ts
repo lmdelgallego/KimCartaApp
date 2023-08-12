@@ -7,6 +7,7 @@ import { PagesRoutingModule } from './pages.routing';
 import { UiModule } from '../components/ui/ui.module';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { LayoutModule } from '../components/layout/layout.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     RouterModule,
     PagesRoutingModule,
     MatSidenavModule,
+    LayoutModule,
     UiModule
   ],
   exports: [
