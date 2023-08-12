@@ -1,9 +1,7 @@
 <h1 class="text-color-primary mb-2">Welcome Home</h1>
 
 
-
-<section class="mb-3">
-  <h2 class="text-color-primary mb-1">Frequent Asked Questions</h2>
+<kc-section title="Frequent Asked Questions">
 
   <!-- Expansion module -->
   <mat-accordion>
@@ -26,15 +24,13 @@
     </mat-expansion-panel>
 
   </mat-accordion>
-</section>
 
+</kc-section>
 
-<section class="mb-3">
-  <div class="section-header">
-    <h2 class="text-color-primary mb-1">Table</h2>
-    <!-- <kc-filter [options]="status" (change)="changeSelected($event)"></kc-filter> -->
-    <kc-filter (selected)="changeFilter($event)" label="Select filter" [options]="filters" ></kc-filter>
-  </div>
+<kc-section title="Table">
+
+  <kc-filter sectionActionHeader (selected)="changeFilter($event)" label="Select filter" [options]="filters" ></kc-filter>
+
   <mat-table [dataSource]="dataSource" class="mat-elevation-z1">
 
     <ng-container matColumnDef="name">
@@ -69,11 +65,8 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-</section>
+</kc-section>
 
 
-<section>
-  <div class="section-header">
-    <h2 class="text-color-primary mb-1">Explore similar cards</h2>
-  </div>
-</section>
+<kc-section title="Explore similar cards">
+</kc-section>

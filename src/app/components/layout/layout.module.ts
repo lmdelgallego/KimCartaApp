@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BaseComponent } from './base/base.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { UiModule } from '../ui/ui.module';
+import { SectionComponent } from './section/section.component';
 
 
 
 @NgModule({
   declarations: [
-    BaseComponent
+    BaseComponent,
+    SectionComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { UiModule } from '../ui/ui.module';
     UiModule
   ],
   exports: [
-    BaseComponent
+    BaseComponent,
+    SectionComponent,
   ]
 })
 export class LayoutModule { }

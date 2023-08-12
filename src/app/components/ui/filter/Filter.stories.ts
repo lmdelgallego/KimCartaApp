@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 
 const meta: Meta<FilterComponent> = {
-  title: 'UI/Filter',
+  title: 'COMPONENTS/Filter',
   component: FilterComponent,
   tags: ['UI', 'Filter', 'autodocs'],
   render: (args) => ({ props: args }),

@@ -416,7 +416,7 @@
                 "args": [],
                 "line": 36
             },
-            "templateData": "<h1 class=\"text-color-primary mb-2\">Welcome Home</h1>\n\n\n\n<section class=\"mb-3\">\n  <h2 class=\"text-color-primary mb-1\">Frequent Asked Questions</h2>\n\n  <!-- Expansion module -->\n  <mat-accordion>\n    <mat-expansion-panel style=\"margin-bottom: 8px;\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          Question 1\n        </mat-panel-title>\n      </mat-expansion-panel-header>\n      <p>This is the primary content of the panel.</p>\n    </mat-expansion-panel>\n\n    <mat-expansion-panel style=\"margin-bottom: 8px;\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          Question 2\n        </mat-panel-title>\n      </mat-expansion-panel-header>\n      <p>This is the primary content of the panel.</p>\n    </mat-expansion-panel>\n\n  </mat-accordion>\n</section>\n\n\n<section class=\"mb-3\">\n  <div class=\"section-header\">\n    <h2 class=\"text-color-primary mb-1\">Table</h2>\n    <!-- <kc-filter [options]=\"status\" (change)=\"changeSelected($event)\"></kc-filter> -->\n    <kc-filter (selected)=\"changeFilter($event)\" label=\"Select filter\" [options]=\"filters\" ></kc-filter>\n  </div>\n  <mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z1\">\n\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"lastName\">\n      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.lastName}} </mat-cell>\n    </ng-container>\n\n\n    <ng-container matColumnDef=\"email\">\n      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.email}} </mat-cell>\n    </ng-container>\n\n\n    <ng-container matColumnDef=\"status\">\n      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.status}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"actions\">\n      <mat-header-cell *matHeaderCellDef aria-label=\"row actions\">&nbsp;</mat-header-cell>\n      <mat-cell *matCellDef=\"let element\">\n        share\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</section>\n\n\n<section>\n  <div class=\"section-header\">\n    <h2 class=\"text-color-primary mb-1\">Explore similar cards</h2>\n  </div>\n</section>\n"
+            "templateData": "<h1 class=\"text-color-primary mb-2\">Welcome Home</h1>\n\n\n<kc-section title=\"Frequent Asked Questions\">\n\n  <!-- Expansion module -->\n  <mat-accordion>\n    <mat-expansion-panel style=\"margin-bottom: 8px;\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          Question 1\n        </mat-panel-title>\n      </mat-expansion-panel-header>\n      <p>This is the primary content of the panel.</p>\n    </mat-expansion-panel>\n\n    <mat-expansion-panel style=\"margin-bottom: 8px;\">\n      <mat-expansion-panel-header>\n        <mat-panel-title>\n          Question 2\n        </mat-panel-title>\n      </mat-expansion-panel-header>\n      <p>This is the primary content of the panel.</p>\n    </mat-expansion-panel>\n\n  </mat-accordion>\n\n</kc-section>\n\n<kc-section title=\"Table\">\n\n  <kc-filter sectionActionHeader (selected)=\"changeFilter($event)\" label=\"Select filter\" [options]=\"filters\" ></kc-filter>\n\n  <mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z1\">\n\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"lastName\">\n      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.lastName}} </mat-cell>\n    </ng-container>\n\n\n    <ng-container matColumnDef=\"email\">\n      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.email}} </mat-cell>\n    </ng-container>\n\n\n    <ng-container matColumnDef=\"status\">\n      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.status}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"actions\">\n      <mat-header-cell *matHeaderCellDef aria-label=\"row actions\">&nbsp;</mat-header-cell>\n      <mat-cell *matCellDef=\"let element\">\n        share\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</kc-section>\n\n\n<kc-section title=\"Explore similar cards\">\n</kc-section>\n"
         },
         {
             "name": "FilterComponent",
@@ -639,6 +639,59 @@
             "templateData": "<kc-layout-base>\n  <router-outlet></router-outlet>\n</kc-layout-base>\n"
         },
         {
+            "name": "SectionComponent",
+            "id": "component-SectionComponent-ab4f5b282976af962c5accd3d8eb019cc8572301cb41a7347016dcabb1321d9b801e33d9c5669cfba4b0fb65bf49158dc901633a86f3157c1faf7a52b6828d9e",
+            "file": "src/app/components/layout/section/section.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "kc-section",
+            "styleUrls": [
+                "./section.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./section.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'kc-section',\n  templateUrl: './section.component.html',\n  styleUrls: ['./section.component.scss']\n})\nexport class SectionComponent {\n\n  @Input('title') title: string = '';\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".kc-section-header{\n  display: flex;\n  justify-content: space-between;\n}\n",
+                    "styleUrl": "./section.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section class=\"kc-section mb-3\">\n  <div class=\"kc-section-header mb-1\">\n    <h2 class=\"text-color-primary\">{{title}}</h2>\n    <ng-content select=\"[sectionActionHeader]\"></ng-content>\n  </div>\n\n  <div class=\"kc-section-body\">\n    <ng-content></ng-content>\n  </div>\n</section>\n"
+        },
+        {
             "name": "SidebarComponent",
             "id": "component-SidebarComponent-a713ba410a5e4c7e03a1fc1ec9947b26ecf9b7813c56cb138e02a414d7935ff75f46323efed1b333d17ed30894387f8c48aa2e8fc13de63f50a36e84e26f2e15",
             "file": "src/app/components/ui/sidebar/sidebar.component.ts",
@@ -782,13 +835,13 @@
         },
         {
             "name": "LayoutModule",
-            "id": "module-LayoutModule-721d7d8fbdd81e85d53dec580208089cb4308291f3915e776d7ab089b155789abad13af8f8729287c6aafc0d47adb75ad688446577b6baa1ee25c38a908b915c",
+            "id": "module-LayoutModule-01f2d10fe9569d33aba5260117bc6732bc768988ce2ede07cb75329d5d5043c20b8fa23bb6534f2ee43806d219a05634468fb0f7316cca8f7f9b7d3f89bf995e",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/layout/layout.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { BaseComponent } from './base/base.component';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { UiModule } from '../ui/ui.module';\n\n\n\n@NgModule({\n  declarations: [\n    BaseComponent\n  ],\n  imports: [\n    CommonModule,\n    MatSidenavModule,\n    UiModule\n  ],\n  exports: [\n    BaseComponent\n  ]\n})\nexport class LayoutModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { BaseComponent } from './base/base.component';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { UiModule } from '../ui/ui.module';\nimport { SectionComponent } from './section/section.component';\n\n\n\n@NgModule({\n  declarations: [\n    BaseComponent,\n    SectionComponent\n  ],\n  imports: [\n    CommonModule,\n    MatSidenavModule,\n    UiModule\n  ],\n  exports: [\n    BaseComponent,\n    SectionComponent,\n  ]\n})\nexport class LayoutModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -799,6 +852,9 @@
                     "elements": [
                         {
                             "name": "BaseComponent"
+                        },
+                        {
+                            "name": "SectionComponent"
                         }
                     ]
                 },
@@ -815,6 +871,9 @@
                     "elements": [
                         {
                             "name": "BaseComponent"
+                        },
+                        {
+                            "name": "SectionComponent"
                         }
                     ]
                 },
@@ -987,11 +1046,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "file": "src/app/components/layout/section/Section.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {},\n}"
+                "defaultValue": "{\n  render: (args: SectionComponent) => ({\n    props: args,\n    template: `\n      <kc-section title=\"Section Title\">\n        <p>Section content</p>\n      </kc-section>\n    `,\n  }),\n}"
             },
             {
                 "name": "Default",
@@ -1012,6 +1071,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    label: 'Filter',\n    options: ['active', 'completed'],\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
             },
             {
                 "name": "ELEMENT_DATA",
@@ -1047,11 +1116,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "file": "src/app/components/layout/section/Section.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SidebarComponent>",
-                "defaultValue": "{\n  title: 'UI/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatSidenavModule],\n    }),\n  ],\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
+                "type": "Meta<SectionComponent>",
+                "defaultValue": "{\n  title: 'LAYOUT/Section',\n  tags: ['LAYOUT', 'autodocs'],\n  component: SectionComponent,\n  render: (args) => ({ props: args }),\n  parameters: {},\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule],\n    }),\n  ],\n}"
             },
             {
                 "name": "meta",
@@ -1071,7 +1140,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FilterComponent>",
-                "defaultValue": "{\n  title: 'UI/Filter',\n  component: FilterComponent,\n  tags: ['UI', 'Filter', 'autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatIconModule, MatChipsModule],\n    }),\n  ],\n  parameters: {\n    // layout: 'fullscreen',\n  },\n  argTypes: {\n    options: {\n      defaultValue: ['all', 'active', 'completed'],\n      control: {\n        type: 'array',\n\n      },\n    },\n\n  },\n}"
+                "defaultValue": "{\n  title: 'COMPONENTS/Filter',\n  component: FilterComponent,\n  tags: ['UI', 'Filter', 'autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatIconModule, MatChipsModule],\n    }),\n  ],\n  parameters: {\n    // layout: 'fullscreen',\n  },\n  argTypes: {\n    options: {\n      defaultValue: ['all', 'active', 'completed'],\n      control: {\n        type: 'array',\n\n      },\n    },\n\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SidebarComponent>",
+                "defaultValue": "{\n  title: 'UI/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatSidenavModule],\n    }),\n  ],\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
             },
             {
                 "name": "preview",
@@ -1131,8 +1210,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SidebarComponent>",
-                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "rawtype": "StoryObj<SectionComponent>",
+                "file": "src/app/components/layout/section/Section.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1159,30 +1238,41 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SidebarComponent>",
+                "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
             }
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/app/components/ui/sidebar/SideBar.stories.ts": [
+            "src/app/components/layout/section/Section.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                    "file": "src/app/components/layout/section/Section.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {},\n}"
+                    "defaultValue": "{\n  render: (args: SectionComponent) => ({\n    props: args,\n    template: `\n      <kc-section title=\"Section Title\">\n        <p>Section content</p>\n      </kc-section>\n    `,\n  }),\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                    "file": "src/app/components/layout/section/Section.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<SidebarComponent>",
-                    "defaultValue": "{\n  title: 'UI/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatSidenavModule],\n    }),\n  ],\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
+                    "type": "Meta<SectionComponent>",
+                    "defaultValue": "{\n  title: 'LAYOUT/Section',\n  tags: ['LAYOUT', 'autodocs'],\n  component: SectionComponent,\n  render: (args) => ({ props: args }),\n  parameters: {},\n  decorators: [\n    moduleMetadata({\n      imports: [CommonModule],\n    }),\n  ],\n}"
                 }
             ],
             "src/app/components/ui/header/Header.stories.ts": [
@@ -1226,7 +1316,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FilterComponent>",
-                    "defaultValue": "{\n  title: 'UI/Filter',\n  component: FilterComponent,\n  tags: ['UI', 'Filter', 'autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatIconModule, MatChipsModule],\n    }),\n  ],\n  parameters: {\n    // layout: 'fullscreen',\n  },\n  argTypes: {\n    options: {\n      defaultValue: ['all', 'active', 'completed'],\n      control: {\n        type: 'array',\n\n      },\n    },\n\n  },\n}"
+                    "defaultValue": "{\n  title: 'COMPONENTS/Filter',\n  component: FilterComponent,\n  tags: ['UI', 'Filter', 'autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatIconModule, MatChipsModule],\n    }),\n  ],\n  parameters: {\n    // layout: 'fullscreen',\n  },\n  argTypes: {\n    options: {\n      defaultValue: ['all', 'active', 'completed'],\n      control: {\n        type: 'array',\n\n      },\n    },\n\n  },\n}"
+                }
+            ],
+            "src/app/components/ui/sidebar/SideBar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {},\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SidebarComponent>",
+                    "defaultValue": "{\n  title: 'UI/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      imports: [MatSidenavModule],\n    }),\n  ],\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
             "src/app/pages/dashboard/dashboard.component.ts": [
@@ -1322,13 +1434,13 @@
                     "kind": 180
                 }
             ],
-            "src/app/components/ui/sidebar/SideBar.stories.ts": [
+            "src/app/components/layout/section/Section.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<SidebarComponent>",
-                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
+                    "rawtype": "StoryObj<SectionComponent>",
+                    "file": "src/app/components/layout/section/Section.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1355,6 +1467,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<FilterComponent>",
                     "file": "src/app/components/ui/filter/Filter.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/components/ui/sidebar/SideBar.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SidebarComponent>",
+                    "file": "src/app/components/ui/sidebar/SideBar.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1435,6 +1560,35 @@
                 "name": "BaseComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/layout/section/Section.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/layout/section/Section.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/layout/section/section.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SectionComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
